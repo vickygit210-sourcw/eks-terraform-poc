@@ -1,6 +1,6 @@
 variable "lt_name" {}
 variable "ebs_optimized" {}
-variable "image_id" {}
+#variable "image_id" {}
 variable "instance_type" {}
 #variable "eks-sg-name" {}
 #variable "security-gp-id" {}

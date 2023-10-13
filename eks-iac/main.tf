@@ -1,10 +1,10 @@
 module "eks" {
     source = "./eks-cluster"
-    eks-cluster-name = "test-b-three"
-    cluster-role = "arn:aws:iam::437563774624:role/eksClusterRole"
+    eks-cluster-name = "ei-demo-eks-cluster"
+    cluster-role = "arn:aws:iam::757671657525:role/eksClusterRole"
     enable-cluster-log = ["audit","api","authenticator"]
-    eks-version = "1.27"
-    subnet-ids = ["subnet-0376a6fb811c1df13","subnet-0b60756699823088c","subnet-004deac879746b5c1"]
+    eks-version = "1.28"
+    subnet-ids = ["subnet-0a733613cbcd25a2f","subnet-0119cdea63e99173c"]
     endpoint-private-access = true
     endpoint-public-access = false
     eks-service-cidr = "172.20.0.0/16"
@@ -16,9 +16,9 @@ module "eks-node" {
    source = "./eks-Nodegroup"
    eks-cluster = module.eks.eks-name
    depends_on = [module.launch_template.ltdepends]
-   node-role = "arn:aws:iam::437563774624:role/role_for_terraform"
+   node-role = "arn:aws:iam::757671657525:role/AmazonEKSNodeRole"
    nodegroup-name = "test-group-b"
-   subnet-ids = ["subnet-0376a6fb811c1df13","subnet-0b60756699823088c","subnet-004deac879746b5c1"]
+   subnet-ids = ["subnet-0a733613cbcd25a2f","subnet-0119cdea63e99173c"]
    #instancetype = "t3.medium"
    ami = "BOTTLEROCKET_x86_64"
    disk-size = "20"
@@ -45,7 +45,7 @@ module "launch_template" {
   source = "./launch-template"
   depends_on = [module.eks.eksdepends]
   ebs_optimized = false
-  image_id = "ami-08863056f2ff03fad"
+  #image_id = "ami-08863056f2ff03fad"
   instance_type = "t3.medium"
   lt_name = "EKS_LT_1_B"
   #worker_node = "${var.worker_node}"

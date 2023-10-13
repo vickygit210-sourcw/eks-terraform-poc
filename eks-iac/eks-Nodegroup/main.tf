@@ -20,7 +20,7 @@ resource "aws_eks_node_group" "ssc_eks_ng" {
       Criticality = "Tier 1"
       CostOwnerTeam = "EICC"
       Compliance = "Validated"
-      Owner = "Nandini"
+      Owner = "Bikram"
       "kubernetes.io/cluster/test-r-three" = "owned"
   }
   scaling_config {
