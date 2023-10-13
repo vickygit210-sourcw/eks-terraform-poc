@@ -9,7 +9,7 @@ module "eks" {
     endpoint-public-access = false
     eks-service-cidr = "172.20.0.0/16"
 
-    eks-sg-name = "sg-0441ad9fd634d17ed"
+    eks-sg-name = "sg-0b7c6032587e144af"
 }
 
 module "eks-node" {
