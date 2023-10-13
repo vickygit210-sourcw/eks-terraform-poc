@@ -35,9 +35,9 @@ module "eks-addons" {
    source = "./eks-addons"
    depends_on = [module.eks-node.eksngdepends]
    eks-cluster = module.eks.eks-name
-   kube_proxy_ver = "v1.27.1-eksbuild.1"
-   core_dns_ver = "v1.10.1-eksbuild.1"
-   vpc_cni_ver = "v1.12.6-eksbuild.2"
+   kube_proxy_ver = "v1.28.1-eksbuild.1"
+   core_dns_ver = "v1.10.1-eksbuild.2"
+   vpc_cni_ver = "v1.14.1-eksbuild.1"
    resolve_conflicts_on_create = "OVERWRITE"
 }
 
