@@ -3,7 +3,7 @@ resource "aws_launch_template" "lteks" {
   ebs_optimized = "${var.ebs_optimized}"
   #image_id = "${var.image_id}"
   instance_type = "${var.instance_type}"
-  vpc_security_group_ids = ["${var.clustersg}"]
+  #vpc_security_group_ids = ["${var.clustersg}"]
   #key_name = "ssc-key-dta-deploy"
   block_device_mappings {
     device_name = "/dev/xvda"

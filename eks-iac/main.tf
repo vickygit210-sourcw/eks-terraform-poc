@@ -52,7 +52,7 @@ module "launch_template" {
   #eks-sg-name = "${var.eks-sg-name}"
   #security-gp-id="${[data.aws_security_group.secgp.id]}"
   eks-cluster-name = module.eks.eks-name
-  clustersg = "sg-0b7c6032587e144af"
+  #clustersg = "sg-0b7c6032587e144af"
   region      = "eu-west-1"
   #nodegroupname = "${var.nodegroup-name}"
 }
