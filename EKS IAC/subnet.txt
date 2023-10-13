@@ -1,0 +1,7 @@
+CONTROLPLANE SUBNETS
+ei-eksdemo-controlplane-pvt1 - subnet-0a733613cbcd25a2f - 10.2.48.0/25
+ei-eksdemo-controlplane-pvt2 - subnet-0119cdea63e99173c - 10.2.48.128/25
+
+WORKLOAD SUBNETS
+ei-eksdemo-workload-pvt1 - subnet-0eb37946f235ce3c8 - 10.2.49.0/24
+ei-eksdemo-workload-pvt2 - subnet-0108c323e262526aa - 10.2.50.0/24
