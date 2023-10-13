@@ -1,5 +1,9 @@
-variable "eks-cluster" {}
-variable "kube_proxy_ver" {}
-variable "core_dns_ver" {}
-variable "vpc_cni_ver" {}
-variable "resolve_conflicts_on_create" {}
+variable "eks-cluster-name" {}
+variable "cluster-role" {}
+variable "enable-cluster-log" {}
+variable "eks-version" {}
+variable "subnet-ids" {}
+variable "endpoint-private-access" {}
+variable "endpoint-public-access" {}
+variable "eks-service-cidr" {}
+variable "eks-sg-name" {}
